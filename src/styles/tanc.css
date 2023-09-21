@@ -1,0 +1,90 @@
+.tcbody {
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  text-align: justify;
+  line-height: 23px;
+}
+
+.header1 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.tcbody > p,
+.tcbody > h3,
+.tcbody > h1 {
+  margin-bottom: 20px;
+}
+
+.tcbody > ul,
+ul > li {
+  text-align: left;
+  list-style-type: square;
+  list-style-position: inside;
+  padding: 10px;
+}
+
+ol > li {
+  list-style-type: decimal;
+  list-style-position: inside;
+  padding: 10px;
+}
+
+.goBack {
+  position: fixed;
+  background-color: var(--color-secondary);
+  font-size: medium;
+  padding: 5px;
+  border-radius: 5px;
+  align-content: center;
+  justify-content: center;
+}
+
+.tableContainer,
+tr > th,
+tr > td {
+  border: 2px solid var(--color-primary);
+}
+
+.faqbody {
+  width: 70%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 60px;
+  text-align: justify;
+  line-height: 23px;
+  background-color: var(--color-tertiary-tint3);
+}
+
+.eachFaq {
+  padding: 3px;
+  /* background-color: var(--color-white); */
+  /* margin: 2px; */
+}
+
+.eachFaq > h4,
+.eachFaq > p {
+  padding: 3px;
+  background-color: var(--color-white);
+  margin: 4px;
+}
+.eachFaq p {
+  display: none;
+}
+.eachFaq:hover p {
+  display: flex;
+}
+
+.faqContent {
+  padding: 40px;
+  width: 60%;
+  margin: auto;
+}
+
+@media (max-width: 1100px) {
+  tcbody {
+    width: 90%;
+  }
+}

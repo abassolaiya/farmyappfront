@@ -1,77 +1,37 @@
-import { createContext, useContext, useState } from "react";
-import axiosClient from "../clients/axios-client";
+// import {createContext, useState} from "react";
 
-export const UserContext = createContext({
-	userInfo: null,
-	loggedIn: false,
-	setUserInfo: (data) => {},
-	setLoggedIn: (loggedIn = false) => {},
-	fetchUserData: async (type = "farm") => {},
-	userLogOut: async () => {},
-});
+// export const UserContext = createContext({});
 
-export const UserContextProvider = ({ children }) => {
-	const loggedInStatus =
-		localStorage.getItem("USER_LOGGED_IN") === "true" ?? false;
-	const [loggedIn, setLoggedIn] = useState(loggedInStatus);
-	const [userInfo, setUserInfo] = useState();
+// export function UserContextProvider({children}) {
+//   const [userInfo,setUserInfo] = useState({});
+//   return (
+//     <UserContext.Provider value={{userInfo,setUserInfo}}>
+//       {children}
+//     </UserContext.Provider>
+//   );
+// }
 
-	// Old way - Bad method
-	// const [userInfo, setUserInfo] = useState(() => {
-	// 	const storedUserInfo = localStorage.getItem("userInfo");
-	// 	return storedUserInfo ? JSON.parse(storedUserInfo) : Object.create();
-	// });
 
-	// useEffect(() => {
-	// 	fetchUserData();
-	// }, [loggedIn]);
+import React, { createContext, useState, useEffect } from "react";
 
-	const fetchUserData = async (type = "user") => {
-		if (type.trim().length === 0) type = localStorage.getItem("USER_TYPE");
-		if (!type) return false;
+export const UserContext = createContext({});
 
-		try {
-			const res = await axiosClient.get(`/${type}/profile`);
+export function UserContextProvider({ children }) {
+  const [userInfo, setUserInfo] = useState(() => {
+    const storedUserInfo = localStorage.getItem("userInfo");
+    return storedUserInfo ? JSON.parse(storedUserInfo) : {};
+  });
 
-			setUserInfo(res.data);
+  useEffect(() => {
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+  }, [userInfo]);
 
-			return true;
-		} catch (error) {
-			localStorage.removeItem("USER_LOGGED_IN");
-			setUserInfo(undefined);
-			setLoggedIn(false);
+  return (
+    <UserContext.Provider value={{ userInfo, setUserInfo }}>
+      {children}
+    </UserContext.Provider>
+  );
+}
 
-			return false;
-		}
-	};
 
-	const userLogOut = async () => {
-		const type = localStorage.getItem("USER_TYPE");
-		if (!type) return;
-		try {
-			await axiosClient.post(`/${type}/logout`);
-		} catch (error) {
-		} finally {
-			localStorage.removeItem("USER_LOGGED_IN");
-			setUserInfo(undefined);
-			setLoggedIn(false);
-		}
-	};
 
-	return (
-		<UserContext.Provider
-			value={{
-				loggedIn,
-				userInfo,
-				setLoggedIn,
-				setUserInfo,
-				fetchUserData,
-				userLogOut,
-			}}
-		>
-			{children}
-		</UserContext.Provider>
-	);
-};
-
-export const useUserContext = () => useContext(UserContext);

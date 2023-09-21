@@ -1,189 +1,194 @@
 .signContainer {
-    max-width: var(--container-width-md);
-    min-width: var(--container-width-sm);
-    min-height: 100vh;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+  max-width: var(--container-width-md);
+  min-width: var(--container-width-sm);
+  min-height: 100vh;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .targets {
-    display: flex;
-    justify-content: center;
-    width: var(--container-width-sm);
+  display: flex;
+  justify-content: center;
+  width: var(--container-width-sm);
 }
 
 .signutarget {
-    flex-basis: 50%;
-    align-items: center;
-    background-color: var(--color-primary);
-    padding: 120px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: var(--container-width-sm);
+  flex-basis: 50%;
+  align-items: center;
+  background-color: var(--color-primary);
+  padding: 120px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--container-width-sm);
 }
 
 .signufform {
-    flex-basis: 50%;
-    background-color: var(--color-white);
+  flex-basis: 50%;
+  background-color: var(--color-white);
 }
 
 .signueach {
-    justify-content: space-between;
-    color: var(--color-white);
-    margin-top: 50px;
-    border: 2px solid var(--color-white);
-    min-width: 80%;
-    align-content: center;
-    padding: 10px;
+  justify-content: space-between;
+  color: var(--color-white);
+  margin-top: 50px;
+  border: 2px solid var(--color-white);
+  min-width: 80%;
+  align-content: center;
+  padding: 10px;
 }
 
-
 .signueach1 {
-    color: var(--color-white);
-    display: flex;
-    justify-content: space-between;
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
 }
 
 .already {
-    color: var(--color-white);
-    margin: 30px;
+  color: var(--color-white);
+  margin: 30px;
 }
 
 .signlink {
-    color: var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .lohosm {
-    width: 20%;
-    justify-content: start;
+  width: 20%;
+  justify-content: start;
 }
 
-.signutargetm{
-    display: none;
-    visibility: hidden;
+.signutargetm {
+  display: none;
+  visibility: hidden;
 }
-
 
 .signtext {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 
 .form_inp {
-    border-bottom: 1px solid var(--color-tertiary);
-    border-radius: 0;
+  border-bottom: 1px solid var(--color-tertiary);
+  border-radius: 0;
 }
 
 .sign_form {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  margin: auto;
 }
 
 .sign_bt {
-    width: 90%;
-    padding: 10px;
-    background-color: var(--color-secondary);
-    border-radius: 3px;
-    font-weight: bolder;
-    color: var(--color-white);
-    margin: auto;
+  width: 95%;
+  padding: 10px;
+  background-color: var(--color-secondary);
+  border-radius: 3px;
+  font-weight: bolder;
+  color: var(--color-white);
+  margin: auto;
 }
 
 .post_sign {
-    align-self: center;
-    margin: auto;
-    width: 90%;
+  align-self: center;
+  margin: auto;
+  width: 90%;
 }
 
 .already1 {
-    font-size: small;
-    padding: 10px;
-    margin-bottom: 40px;
+  font-size: small;
+  padding: 10px;
+  margin-bottom: 40px;
 }
 
 .signalt {
-    color: var(--color-secondary);
-    font-weight: bold;
+  color: var(--color-secondary);
+  font-weight: bold;
 }
 
-@media(max-width:870px) {
-    .signufform {
-        flex-basis: 100%;
-    }
-    .signutarget {
-        display: none;
-        visibility: hidden;
-    }
+.tandcConatiner {
+  text-align: center;
+  width: 90%;
+}
 
-    .signtext {
-        display: block;
-        visibility: visible;
-        color: var(--color-primary);
-    }
+.tandc {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
 
-    .targets {
-        display: flex;
-        visibility: visible;
-        align-items:center;
-        justify-content: center;
-        width: 95%;
-        padding: 10px;
-    }
+@media (max-width: 870px) {
+  .signufform {
+    flex-basis: 100%;
+  }
+  .signutarget {
+    display: none;
+    visibility: hidden;
+  }
 
-    .signutargetm {
-        display: flex;
-        visibility: visible;
-        align-items:center;
-        justify-content: space-between;
-        width: 90%;
-        padding: 10px;
-        /* margin: 10px 40px; */
-    }
-    
-    .signueachm {
-        width: 30%;
-        color: var(--color-primary);
-        border: 1px solid var(--color-primary);
-        border-radius: 5px;
-        min-height: 45px;
-        max-height: 60px;
-        margin: 10px 10px;
-    }
-    
-    .signueach1ms {
-        width: 100%;
-        color: var(--color-white);
-        border: 1px solid var(--color-primary);
-        border-radius: 5px;
-        min-height: 45px;
-        max-height: 60px;
-        background-color: var(--color-primary);
-    }
-    
-    .signutargetm {
-        
-        
-        text-align: center;
-        
-    }
+  .signtext {
+    display: block;
+    visibility: visible;
+    color: var(--color-primary);
+  }
 
-    .targetIcon{
-        padding:1px 10px ;
-        color: var(--color-primary);
-        font-size:large;
-        font-weight: medium;
-    }
+  .targets {
+    display: flex;
+    visibility: visible;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    padding: 10px;
+  }
 
-    .targetText {
-        font-size:10px;
-    }
+  .signutargetm {
+    display: flex;
+    visibility: visible;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    /* margin: 10px 40px; */
+  }
 
-    .sign_form {
-        width: 100%;
-        margin: auto;
-    }
+  .signueachm {
+    width: 30%;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    min-height: 45px;
+    max-height: 60px;
+    margin: 10px 10px;
+  }
+
+  .signueach1ms {
+    width: 100%;
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    min-height: 45px;
+    max-height: 60px;
+    background-color: var(--color-primary);
+  }
+
+  .signutargetm {
+    text-align: center;
+  }
+
+  .targetIcon {
+    padding: 1px 10px;
+    color: var(--color-primary);
+    font-size: large;
+    font-weight: medium;
+  }
+
+  .targetText {
+    font-size: 10px;
+  }
+
+  .sign_form {
+    width: 100%;
+    margin: auto;
+  }
 }

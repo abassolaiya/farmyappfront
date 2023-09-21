@@ -1,40 +1,39 @@
 .navbar {
-    display: flex;
-    width: var(--container-width-lg);
-    justify-content: space-between;
-    background-color: var(--color-white);
-    margin: auto;
-    /* box-shadow: 4px 0px var(--color-tertiary-tint2); */
-    height: 70px;
-    /* position: fixed; */
+  display: flex;
+  width: var(--container-width-lg);
+  justify-content: space-between;
+  background-color: var(--color-white);
+  margin: auto;
+  /* box-shadow: 4px 0px var(--color-tertiary-tint2); */
+  height: 70px;
+  /* position: fixed; */
 }
 
 .navlogoi {
-    width: 100px;
-    
+  width: 100px;
 }
 
 .menuitems {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    margin: 5px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 5px 0px;
 }
 
 .menuitem {
-    margin: 4px 4px;
-    width: 90px;
+  margin: 4px 4px;
+  width: 90px;
 }
 
 .menuicon {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border-radius:1rem ;
-    padding: 4px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 1rem;
+  padding: 4px;
 }
 
 .menuident {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 /* .menu_icon1 {
@@ -43,128 +42,131 @@
 } */
 
 .navbar1 {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 
-.nav_fixed{
-    position: fixed;
-    z-index: 15;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.9);
-    top: 20px;
-    left: 20px;
+.nav_fixed {
+  position: fixed;
+  z-index: 15;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* margin: 10px ; */
+}
+
+.nav_fixed_Canel {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.Mprofback {
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 1100px) {
+  .navbar {
+    display: none;
+    visibility: hidden;
+  }
+
+  .navbar1 {
+    display: flex;
+    visibility: visible;
+    width: 100%ß;
+    justify-content: center;
+    background-color: var(--color-white);
+    align-content: center;
+    align-items: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* margin: 5rem; */
+  }
+
+  .scrollable {
+    overflow-y: scroll;
+    margin-bottom: 40px;
+  }
+
+  .Mmenuitems {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    /* margin: 10px ; */
-  }
-
-  .nav_fixed_Canel{
-    position: absolute;
+    /* margin: 20px; */
+    /* position: absolute; */
     left: 30px;
     top: 30px;
-    width: 30px;
-    height: 30px;
     cursor: pointer;
+    width: 100vw;
   }
 
-  .Mprofback {
-    width: 50px;
-    height: 50px;
+  .Mmenuitem {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px 20px;
+    align-content: flex-end;
   }
 
-@media (max-width:1100px) {
-    .navbar {
-        display: none;
-        visibility: hidden;
-    }
+  .Mmenuicon {
+    /* background-color: var(--color-primary); */
+    color: var(--color-primary);
+    /* border-radius:1rem ; */
+    padding: 4px;
+    margin: 0 10px;
+  }
 
-    .navbar1 {
-        display: flex;
-        visibility: visible;
-        width: 100%ß;
-        justify-content: center;
-        background-color: var(--color-white);
-        align-content: center;
-        align-items: center;
-        flex:1;
-        display: flex;
-        align-items: center;
-        /* margin: 5rem; */
-    }
+  .Mmenuident {
+    margin: 0 13px;
+    font-size: large;
+    font-weight: bold;
+    color: var(--color-tertiary);
+  }
 
-    .Mmenuitems {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        /* margin: 20px; */
-        /* position: absolute; */
-        left: 30px;
-        top: 30px;
-        cursor: pointer;
-        width: 100vw;
-        
-    }
-    
-    .Mmenuitem {
-        display: flex;
-        justify-content:flex-start;
-        margin: 0px 20px;
-        align-content: flex-end;
-    }
-
-    .Mmenuicon {
-        /* background-color: var(--color-primary); */
-        color: var(--color-primary);
-        /* border-radius:1rem ; */
-        padding: 4px;
-        margin: 0 10px;
-    }
-
-    .Mmenuident {
-        margin: 0 13px ;
-        font-size: large;
-        font-weight: bold;
-        color: var(--color-tertiary);
-    }
-
-    /* .menuident {
+  /* .menuident {
         font-size: medium;
     } */
 
-    .menuitemM {
-        display: flex;
-    }
+  .menuitemM {
+    display: flex;
+  }
 
-    .menu_icon1{
-        /* display: inline;
+  .menu_icon1 {
+    /* display: inline;
         visibility: visible; */
-        width: 20px;
-        color: var(--color-primary);
-        height: 20px;
-        /* margin-left: 10px; */
-        /* align-self: flex-start; */
-      }
+    width: 20px;
+    color: var(--color-primary);
+    height: 20px;
+    /* margin-left: 10px; */
+    /* align-self: flex-start; */
+  }
 
-      .Mprofback {
-        margin-top: 100px;
-        width: 100px;
-        object-fit: cover;
-        height: 100px;
-        align-self: center;
-        border-radius: 50px;
+  .Mprofback {
+    margin-top: 100px;
+    width: 100px;
+    object-fit: cover;
+    height: 100px;
+    align-self: center;
+    border-radius: 50px;
+  }
 
-      }
-
-      .Mname {
-        align-self: center;
-        margin-bottom: 3px;
-      }
-    .mNameCont {
-        align-self: center;
-        margin-bottom: 4vh;
-    }
+  .Mname {
+    align-self: center;
+    margin-bottom: 3px;
+  }
+  .mNameCont {
+    align-self: center;
+    margin-bottom: 4vh;
+  }
 }

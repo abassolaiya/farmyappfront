@@ -18,6 +18,8 @@
 .profback {
     width: 100%;
     border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .profimg {
